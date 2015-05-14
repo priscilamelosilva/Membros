@@ -36,7 +36,7 @@ def listar():
 @login_not_required
 @no_csrf
 def deletar(membro_id):
-    key = ndb.Key(Membro,int(membro_id))
+    key = ndb.Key(Membro, int(membro_id))
     key.delete()
 
 

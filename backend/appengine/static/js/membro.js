@@ -54,8 +54,8 @@ $(document).ready(function () {
                 adicionarMembro(membro);
             }).error(function(erro){
                 for (propriedade in erro.responseJSON){
-                    $('#'+propriedade+'-div').addClass('has-error');
-                    $('#'+propriedade+'-span').text(erro.responseJSON[propriedade]);
+                    $('#' + propriedade + '-div').addClass('has-error');
+                    $('#' + propriedade + '-span').text(erro.responseJSON[propriedade]);
                 }
             }).always(function(){
                 $ajaxSaveGif.hide();
