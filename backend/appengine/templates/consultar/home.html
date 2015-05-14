@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+{% block body %}
+    {% set membro = membro or None %}
+    {% set erros = erros or None %}
+    {% block css %}
+            <link rel="stylesheet" href="/static/css/table.css"/>
+        {% endblock %}
+    <div class="container">
+    <div class="row">
+         <div class="small-12 medium-12 large-12 columns">
+            </br>
+            <div class="well">
+                <h1 class="text-center">Listagem de Membros</h1>
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>RG</th>
+                        <th>Data de Nascimento</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>Cargo</th>
+                    </tr>
+                    </tr>
+                    </thead>
+                    {% for membro in membro_lista %}
+                        <tr>
+                        <td><a href="/editar/home/editar_form/{{ membro.id }}"><button class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></button></a></td>
+                        <td>{{ membro.nome }}</td>
+                        <td>{{ membro.cpf }}</td>
+                        <td>{{ membro.rg }}</td>
+                        <td>{{ membro.data }}</td>
+                        <td>{{ membro.endereco }}</td>
+                        <td>{{ membro.telefone }}</td>
+                        <td>{{ membro.cargo }}</td>
+                        <td>
+                            <form action="/excluir/home/delete_form/{{ membro.id }}" method="post">
+                                {{ csrf_input() }}
+                                <button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+                            </form>
+                        </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

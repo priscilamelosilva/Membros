@@ -1,0 +1,80 @@
+.timeline-badge > i{
+    vertical-align: sub;
+}
+
+.hide_navbar{
+    margin-left: 0 !important;
+}
+
+.btn-new-object{
+    margin-right: 3px;
+}
+
+.profile_photo{
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+}
+
+.profile_photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px !important;
+    padding: 5px;
+    margin: 5px;
+}
+
+.news-text span{
+    font-weight: bold;
+}
+
+.news-time{
+    font-weight: bold;
+}
+
+.calls-view th:first-child{
+    width: 100%;
+    white-space: nowrap;
+}
+
+.calls-view i.icon-check{
+    color: green;
+}
+
+.calls-view i.icon-check-empty{
+    color: red;
+}
+
+.calls-view th{
+    width: 0;
+    white-space: nowrap;
+}
+
+.calls th:last-child {
+    width: 1px;
+    white-space: nowrap;
+}
+
+.calls th, .calls td:last-child{
+    text-align: center !important;
+}
+
+.login div.box-content.padded{
+    padding: 10px;
+}
+
+a.btn.btn-social.btn-google-plus{
+    background-image: none;
+}
+
+.check-fake input{
+    margin: 0 !important;
+    top: 0!important;
+    left: 0!important;
+    position: absolute!important;
+}
+
+.user-avatar .avatar img{
+    width: 100px;
+    height: 100px;
+}

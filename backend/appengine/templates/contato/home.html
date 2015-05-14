@@ -1,0 +1,95 @@
+{% extends 'base/base.html' %}
+{% block tabs %}
+    {{ select_tab('CONTATO') }}
+{% endblock %}
+{% block css %}
+        <link rel="stylesheet" href="/static/css/style.css"/>
+        <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-social.css"/>
+        <link rel="stylesheet" href="/static/font-awesome-4.2.0/css/font-awesome.min.css"/>
+{% endblock %}
+{% block body %}
+    <!--SHYM CONTACT START HERE -->
+    <h1 id="contato"></h1>
+    <footer class="shym-contact">
+
+      <div class="container">
+
+        <!--======= TITTLE PART =========-->
+        <div class="tittle">
+          <h3 class='shym-text-center'>Entre em contato conosco</h3>
+          <hr>
+          <p class='shym-text-center'>Acesse nossas redes sociais.</p>
+        </div>
+
+        <!--======= SOCIAL ICONS PART =========-->
+        <div class="social_icons">
+          <ul>
+            <li class="facebook"> <a href="#." data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s"><i class="fa fa-facebook"></i> </a> </li>
+            <li class="twitter"> <a href="#." data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s"><i class="fa fa-twitter"></i> </a> </li>
+            <li class="googleplus"> <a href="#." data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s"><i class="fa fa-google"></i> </a> </li>
+            <li class="linkedin "> <a href="#." data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s"><i class="fa fa-linkedin"></i> </a> </li>
+          </ul>
+        </div>
+
+        <!--======= CONTACT INFO PART =========-->
+        <div class="con-info">
+          <div class="row">
+		  <div class='container'>
+            <div class="col-md-6 col-sm-6">
+              <div class="row">
+                <div class="col-sm-6"> <i class="ion-flag"></i>
+                  <h4>SOBRE</h4>
+                  <p> Projeto de Programação de Scripts. Faculdade de Tecnologia Professor Jessen Vidal.</p>
+                </div>
+
+                <!--======= OFFICE ADRESS PART =========-->
+                <div class="col-sm-6"> <i class="ion-android-location"></i>
+                  <h4>NOSSO ENDEREÇO</h4>
+                  <p> Shym Center Adress</p>
+                  <p>+1 (000)-999-0000</p>
+                  <p> Kottayam Kerala. India</p>
+                  <p> support@domain.com </p>
+                </div>
+              </div>
+            </div>
+
+            <!--======= GET IN TOUCH PART =========-->
+            <div class="col-md-6 col-sm-6"> <i class="ion-flag"></i>
+              <h4>MANDE SUA MENSAGEM</h4>
+              <div id="contact_form">
+                <form id="contact-form" class="contact-form " form action="#" accept-charset="utf-8" method="post" >
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label><span>Name</span>
+                          <input name="name" type="text" placeholder="Nome"/>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>
+                          <input name="email" type="email" placeholder="Email"/>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label> <span>Message</span>
+                        <textarea name="message" placeholder="Sua Mensagem"></textarea>
+                      </label>
+                      <input name="submit" type="submit" value="ENVIE SUA MENSAGEM" />
+                    </div>
+                  </div>
+                </form>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+		</div>
+      </div>
+    </div>
+  </footer>
+    {% block footer %}
+        {% endblock %}
+{% endblock %}

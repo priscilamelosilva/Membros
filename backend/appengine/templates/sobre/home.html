@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+{% block tabs %}
+    {{ select_tab('SOBRE') }}
+{% endblock %}
+{% block body %}
+    {% set membro = membro or None %}
+    {% set erros = erros or None %}
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            </br>
+            <div class="well">
+                <h1 class="text-center">Sobre</h1>
+                <center><p>Site para auxiliar no cadastro de membros de igrejas e outras atividades.</p>
+                    <p>Aluna: Priscila de Melo Silva</p>
+                    <p>5º Semestre - Manhã</p>
+                    <p>Professor: Renzo Nuccitelli</p>
+                    <p>Disciplina: Programação de Scripts</p></center>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    {% block footer %}
+        {% endblock %}
+{% endblock %}

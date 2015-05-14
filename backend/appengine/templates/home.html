@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-social.css"/>
+    <link rel="stylesheet" href="/static/font-awesome-4.2.0/css/font-awesome.min.css"/>
+{% endblock %}
+{% block tabs %}
+    {{ select_tab('MEMBROS') }}
+{% endblock %}
+{% block body %}
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Membros</h1>
+                <p>{% trans %}Site para cadastro de Membros.{% endtrans %}</p>
+            </div>
+        </div>
+        <br/>
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well">
+                <h2>{% trans %}Para ter acesso, primeiro faça Login{% endtrans %}
+                </h2>
+                <br/>
+                <p>
+                    {% if _logged_user %}
+                        <div class="alert alert-danger" role="alert">Bem Vindo(a)! Clique em inicar para continuar.</div>
+                        <a href="/home_logado" class="btn btn-primary"><span class="glyphicon glyphicon-play"></span> Iniciar</a>
+                    {% else %}
+                        <a href="{{ _login_path }}" class="btn btn-primary"></i><span class="glyphicon glyphicon-log-in"></span>{% trans %} Fazer Login agora{% endtrans %}</a>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% block footer %}
+    {% endblock %}
+{% endblock %}

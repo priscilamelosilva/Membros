@@ -1,0 +1,1138 @@
+# English (United States) translations for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-04-26 14:17-0300\n"
+"PO-Revision-Date: 2014-06-26 00:14-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en_US <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/home.html:14
+msgid "Site para cadastro de Membros."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/home.html:20
+msgid "Para ter acesso, primeiro faça Login"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/home.html:29
+msgid " Fazer Login agora"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/admin/home.html:5
+msgid "Administration Panel"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/admin/home.html:8
+msgid "Security Paths Table"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/admin/home.html:11
+msgid " Configurations"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/admin/home.html:13
+msgid " User Permissions"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/admin/home.html:14
+msgid "Facebook App Data"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/admin/home.html:15
+msgid "Passwordless App Data"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/400.html:6
+msgid "Sorry, an error happened and we are investigating"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/404.html:6
+msgid "Sorry, page not found"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/base.html:55
+msgid "MEMBRESIA"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/base.html:57
+msgid "CONTATO"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/base.html:59
+msgid "SOBRE"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/base.html:62
+msgid "Admin"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/base.html:79
+msgid "Account"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/base.html:83
+msgid ""
+"\n"
+"                                        Logout"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/base/base.html:91
+msgid "Login"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/home.html:13
+msgid "Login Options"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/home.html:25
+msgid "Type your email"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/pending.html:6
+msgid "Security Information"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/pending.html:8
+#, python-format
+msgid ""
+"The email provided by %(provider)s is already in use. For your security, "
+"we are going to\n"
+"                    send an email to %(email)s to ensure it is yours."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/pending.html:11
+msgid "This security procedure will be necessary only this time."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/pending.html:13
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/passwordless/home.html:11
+msgid "Check your spam box, once some providers can filter this email."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/facebook/form.html:6
+msgid "Facebook App Form"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/facebook/form.html:8
+msgid "This data is used to proceed Facebook login. More information in"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/facebook/form.html:10
+msgid "Facebook Login Docs"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/facebook/form.html:14
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/passwordless/form.html:14
+msgid "Type the app's id"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/facebook/form.html:16
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/passwordless/form.html:16
+msgid "Type the app's token"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/facebook/form.html:18
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/passwordless/form.html:18
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/account_form.html:36
+msgid "Save"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/passwordless/form.html:6
+msgid "Passworless App Form"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/passwordless/form.html:8
+msgid "This data is used to proceed passswordless login. More information in"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/passwordless/home.html:6
+msgid "Login Email Instructions"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/login/passwordless/home.html:8
+msgid ""
+"We will send you an email with the login link using\n"
+"                    <a "
+"href=\"https://pswdless.appspot.com/\">Passwordless</a>."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/multitenant/home.html:11
+msgid "A Full-Stack project for Google App Engine"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/multitenant/home.html:20
+msgid ""
+"Create CRUD code on\n"
+"                        <a href=\"https://cloud.google.com/products/app-"
+"engine/\">App Engine</a>"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/multitenant/home.html:26
+msgid ""
+" Check Courses App\n"
+"                            Out"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/multitenant/home.html:33
+msgid "Tekton is open source."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/multitenant/home.html:38
+msgid "Check Git Hub Out"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/novo_membro/home.html:16
+msgid "Data de Nascimento"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/account_form.html:11
+msgid "Your Account"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/account_form.html:15
+msgid "Name"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/account_form.html:17
+msgid "Language"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/account_form.html:29
+msgid "Time Zone"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/admin.html:41
+msgid "Users Table"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/home.html:6
+msgid "Security Table"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/home.html:10
+msgid "Path"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/home.html:11
+msgid "Allowed Groups"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/home.html:12
+msgid ""
+"<a href=\"http://pt.wikipedia.org/wiki/Cross-"
+"site_request_forgery\">CSRF</a> Security"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/home.html:22
+msgid "Secure"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/permission/home.html:22
+msgid "Unsecure"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/updown/home.html:7
+msgid "File Upload Form"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/updown/home.html:12
+msgid "Choose a file"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/updown/home.html:15
+msgid "Upload"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/appengine/templates/updown/ok.html:7
+msgid "File Upload Finished"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:48
+#, python-format
+msgid "Must be one of: %(choices)s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:53
+msgid "Required field"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:134
+#, python-format
+msgid "Has %(len)s characters and it must have exactly %(exactly_len)s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:137
+#, python-format
+msgid "Has %(len)s characters and it must have %(max_len)s or less"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:140
+#, python-format
+msgid "Has %(len)s characters and it must have %(min_len)s or more"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:149
+msgid "Invalid email"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:173
+msgid "Key's kind should be defined"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:178
+msgid "Invalid key"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:225
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:285
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:332
+#, python-format
+msgid "Must be greater than %(lower)s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:227
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:287
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:334
+#, python-format
+msgid "Must be less than %(upper)s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:230
+msgid "Must be integer"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:253
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/ndb/field.py:10
+msgid "Must be true or false"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:290
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:337
+msgid "Must be a number"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:371
+#, python-format
+msgid "Invalid date. Must be on format %(format)s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:371
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:377
+msgid "MM/dd/YYYY"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:411
+#, python-format
+msgid "Invalid datetime. Must be on format %(format)s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:411
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:416
+msgid "MM/dd/YYYY HH:mm:ss"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:482
+msgid "CEP must have exactly 8 characters"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/gaeforms/base.py:486
+msgid "CEP must contain only numbers"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:11
+msgid "Null character in input stream, replaced with U+FFFD."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:13
+msgid "Invalid codepoint in stream."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:15
+msgid "Solidus (/) incorrectly placed in tag."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:17
+msgid "Incorrect CR newline entity, replaced with LF."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:19
+msgid "Entity used with illegal number (windows-1252 reference)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:21
+#, python-format
+msgid ""
+"Numeric entity couldn't be converted to character (codepoint "
+"U+%(charAsInt)08x)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:24
+#, python-format
+msgid "Numeric entity represents an illegal codepoint: U+%(charAsInt)08x."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:27
+msgid "Numeric entity didn't end with ';'."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:29
+msgid "Numeric entity expected. Got end of file instead."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:31
+msgid "Numeric entity expected but none found."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:33
+msgid "Named entity didn't end with ';'."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:35
+msgid "Named entity expected. Got none."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:37
+msgid "End tag contains unexpected attributes."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:39
+msgid "End tag contains unexpected self-closing flag."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:41
+msgid "Expected tag name. Got '>' instead."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:43
+msgid ""
+"Expected tag name. Got '?' instead. (HTML doesn't support processing "
+"instructions.)"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:46
+msgid "Expected tag name. Got something else instead"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:48
+msgid "Expected closing tag. Got '>' instead. Ignoring '</>'."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:50
+msgid "Expected closing tag. Unexpected end of file."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:52
+#, python-format
+msgid "Expected closing tag. Unexpected character '%(data)s' found."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:54
+msgid "Unexpected end of file in the tag name."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:56
+msgid "Unexpected end of file. Expected attribute name instead."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:58
+msgid "Unexpected end of file in attribute name."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:60
+msgid "Invalid character in attribute name"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:62
+msgid "Dropped duplicate attribute on tag."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:64
+msgid "Unexpected end of file. Expected = or end of tag."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:66
+msgid "Unexpected end of file. Expected attribute value."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:68
+msgid "Expected attribute value. Got '>' instead."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:70
+msgid "Unexpected = in unquoted attribute"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:72
+msgid "Unexpected character in unquoted attribute"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:74
+msgid "Unexpected character after attribute name."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:76
+msgid "Unexpected character after attribute value."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:78
+msgid "Unexpected end of file in attribute value (\")."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:80
+msgid "Unexpected end of file in attribute value (')."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:82
+msgid "Unexpected end of file in attribute value."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:84
+msgid "Unexpected end of file in tag. Expected >"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:86
+msgid "Unexpected character after / in tag. Expected >"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:88
+msgid "Expected '--' or 'DOCTYPE'. Not found."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:90
+msgid "Unexpected ! after -- in comment"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:92
+msgid "Unexpected space after -- in comment"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:94
+msgid "Incorrect comment."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:96
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:104
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:106
+msgid "Unexpected end of file in comment."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:98
+msgid "Unexpected end of file in comment (-)"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:100
+msgid "Unexpected '-' after '--' found in comment."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:102
+msgid "Unexpected end of file in comment (--)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:108
+msgid "Unexpected character in comment found."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:110
+msgid "No space after literal string 'DOCTYPE'."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:112
+msgid "Unexpected > character. Expected DOCTYPE name."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:114
+msgid "Unexpected end of file. Expected DOCTYPE name."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:116
+msgid "Unexpected end of file in DOCTYPE name."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:118
+msgid "Unexpected end of file in DOCTYPE."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:120
+#, python-format
+msgid "Expected space or '>'. Got '%(data)s'"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:122
+msgid "Unexpected end of DOCTYPE."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:124
+msgid "Unexpected character in DOCTYPE."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:126
+msgid "XXX innerHTML EOF"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:128
+msgid "Unexpected DOCTYPE. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:130
+msgid "html needs to be the first start tag."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:132
+msgid "Unexpected End of file. Expected DOCTYPE."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:134
+msgid "Erroneous DOCTYPE."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:136
+msgid "Unexpected non-space characters. Expected DOCTYPE."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:138
+#, python-format
+msgid "Unexpected start tag (%(name)s). Expected DOCTYPE."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:140
+#, python-format
+msgid "Unexpected end tag (%(name)s). Expected DOCTYPE."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:142
+#, python-format
+msgid "Unexpected end tag (%(name)s) after the (implied) root element."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:144
+#, python-format
+msgid "Unexpected end of file. Expected end tag (%(name)s)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:146
+msgid "Unexpected start tag head in existing head. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:148
+#, python-format
+msgid "Unexpected end tag (%(name)s). Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:150
+#, python-format
+msgid "Unexpected start tag (%(name)s) that can be in head. Moved."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:152
+#, python-format
+msgid "Unexpected start tag (%(name)s)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:154
+#, python-format
+msgid "Missing end tag (%(name)s)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:156
+#, python-format
+msgid "Missing end tags (%(name)s)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:158
+#, python-format
+msgid "Unexpected start tag (%(startName)s) implies end tag (%(endName)s)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:161
+#, python-format
+msgid "Unexpected start tag (%(originalName)s). Treated as %(newName)s."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:163
+#, python-format
+msgid "Unexpected start tag %(name)s. Don't use it!"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:165
+#, python-format
+msgid "Unexpected start tag %(name)s. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:167
+#, python-format
+msgid "Unexpected end tag (%(gotName)s). Missing end tag (%(expectedName)s)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:170
+#, python-format
+msgid "End tag (%(name)s) seen too early. Expected other end tag."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:172
+#, python-format
+msgid "Unexpected end tag (%(gotName)s). Expected end tag (%(expectedName)s)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:174
+#, python-format
+msgid "End tag (%(name)s) seen too early. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:176
+#, python-format
+msgid ""
+"End tag (%(name)s) violates step 1, paragraph 1 of the adoption agency "
+"algorithm."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:179
+#, python-format
+msgid ""
+"End tag (%(name)s) violates step 1, paragraph 2 of the adoption agency "
+"algorithm."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:182
+#, python-format
+msgid ""
+"End tag (%(name)s) violates step 1, paragraph 3 of the adoption agency "
+"algorithm."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:185
+#, python-format
+msgid ""
+"End tag (%(name)s) violates step 4, paragraph 4 of the adoption agency "
+"algorithm."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:188
+#, python-format
+msgid "Unexpected end tag (%(originalName)s). Treated as %(newName)s."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:190
+#, python-format
+msgid "This element (%(name)s) has no end tag."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:192
+#, python-format
+msgid "Unexpected implied end tag (%(name)s) in the table phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:194
+#, python-format
+msgid "Unexpected implied end tag (%(name)s) in the table body phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:196
+msgid "Unexpected non-space characters in table context caused voodoo mode."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:199
+msgid "Unexpected input with type hidden in table context."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:201
+msgid "Unexpected form in table context."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:203
+#, python-format
+msgid "Unexpected start tag (%(name)s) in table context caused voodoo mode."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:206
+#, python-format
+msgid "Unexpected end tag (%(name)s) in table context caused voodoo mode."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:209
+#, python-format
+msgid "Unexpected table cell start tag (%(name)s) in the table body phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:212
+#, python-format
+msgid "Got table cell end tag (%(name)s) while required end tags are missing."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:215
+#, python-format
+msgid "Unexpected end tag (%(name)s) in the table body phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:217
+#, python-format
+msgid "Unexpected implied end tag (%(name)s) in the table row phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:219
+#, python-format
+msgid "Unexpected end tag (%(name)s) in the table row phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:221
+msgid "Unexpected select start tag in the select phase treated as select end tag."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:224
+msgid "Unexpected input start tag in the select phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:226
+#, python-format
+msgid "Unexpected start tag token (%(name)s in the select phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:229
+#, python-format
+msgid "Unexpected end tag (%(name)s) in the select phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:231
+#, python-format
+msgid ""
+"Unexpected table element start tag (%(name)s) in the select in table "
+"phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:233
+#, python-format
+msgid "Unexpected table element end tag (%(name)s) in the select in table phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:235
+msgid "Unexpected non-space characters in the after body phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:237
+#, python-format
+msgid "Unexpected start tag token (%(name)s) in the after body phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:240
+#, python-format
+msgid "Unexpected end tag token (%(name)s) in the after body phase."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:243
+msgid "Unexpected characters in the frameset phase. Characters ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:245
+#, python-format
+msgid "Unexpected start tag token (%(name)s) in the frameset phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:248
+msgid "Unexpected end tag token (frameset) in the frameset phase (innerHTML)."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:251
+#, python-format
+msgid "Unexpected end tag token (%(name)s) in the frameset phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:254
+msgid "Unexpected non-space characters in the after frameset phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:257
+#, python-format
+msgid "Unexpected start tag (%(name)s) in the after frameset phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:260
+#, python-format
+msgid "Unexpected end tag (%(name)s) in the after frameset phase. Ignored."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:263
+msgid "Unexpected end tag after body(innerHtml)"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:265
+msgid "Unexpected non-space characters. Expected end of file."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:267
+#, python-format
+msgid "Unexpected start tag (%(name)s). Expected end of file."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:270
+#, python-format
+msgid "Unexpected end tag (%(name)s). Expected end of file."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:273
+msgid "Unexpected end of file. Expected table content."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:275
+msgid "Unexpected end of file. Expected select content."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:277
+msgid "Unexpected end of file. Expected frameset content."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:279
+msgid "Unexpected end of file. Expected script content."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:281
+msgid "Unexpected end of file. Expected foreign content"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:283
+#, python-format
+msgid "Trailing solidus not allowed on element %(name)s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:285
+#, python-format
+msgid "Element %(name)s not allowed in a non-html context"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:287
+#, python-format
+msgid "Unexpected end tag (%(name)s) before html."
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/constants.py:289
+msgid "Undefined error (this sucks and should be fixed)"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:26
+#, python-format
+msgid "StartTag not in PCDATA content model flag: %s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:28
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:54
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:84
+#, python-format
+msgid "Tag name is not a string: %r"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:30
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:56
+msgid "Empty tag name"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:32
+#, python-format
+msgid "Void element reported as StartTag token: %s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:34
+#, python-format
+msgid "Non-void element reported as EmptyTag token: %s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:39
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:71
+#, python-format
+msgid "Attribute name is not a string: %r"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:41
+msgid "Empty attribute name"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:43
+#, python-format
+msgid "Attribute value is not a string: %r"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:58
+#, python-format
+msgid "Void element reported as EndTag token: %s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:61
+#, python-format
+msgid "EndTag (%s) does not match StartTag (%s)"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:66
+msgid "Comment not in PCDATA content model flag"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:73
+#, python-format
+msgid "%s token with empty data"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:77
+msgid "Non-space character(s) found in SpaceCharacters token: "
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:82
+#, python-format
+msgid "Doctype not in PCDATA content model flag: %s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/filters/lint.py:91
+#, python-format
+msgid "Unknown token type: %s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/serializer/htmlserializer.py:200
+msgid "System identifer contains both single and double quote characters"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/serializer/htmlserializer.py:212
+msgid "Unexpected </ in CDATA"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/serializer/htmlserializer.py:223
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/serializer/htmlserializer.py:271
+msgid "Unexpected child element of a CDATA element"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/serializer/htmlserializer.py:277
+msgid "Comment contains --"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/serializer/htmlserializer.py:284
+#, python-format
+msgid "Entity %s not recognized"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/treewalkers/_base.py:33
+msgid "Void element has children"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/treewalkers/_base.py:95
+msgid "Unknown node type: "
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/treewalkers/lxmletree.py:137
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/treewalkers/lxmletree.py:187
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/treewalkers/lxmletree.py:203
+#, python-format
+msgid "Text nodes are text or tail, found %s"
+msgstr ""
+
+#: /home/inspiron/PycharmProjects/Membresia/backend/venv/lib/python2.7/site-packages/pip/vendor/html5lib/treewalkers/lxmletree.py:176
+msgid "Text nodes have no children"
+msgstr ""
+
+#~ msgid "Tekton Full-Stack is open soure. "
+#~ msgstr ""
+
+#~ msgid "Tekton Full-Stack is open source. "
+#~ msgstr ""
+
+#~ msgid "A Full-Stak project for Google App Engine"
+#~ msgstr ""
+
+#~ msgid "Set your permission do ADMIN and play around"
+#~ msgstr ""
+
+#~ msgid "Start Date"
+#~ msgstr ""
+
+#~ msgid "Has %(len)s characters and it must have less than 500"
+#~ msgstr ""
+
+#~ msgid "This is a generic home for course_app "
+#~ msgstr ""
+
+#~ msgid "List of Courses"
+#~ msgstr ""
+
+#~ msgid "D"
+#~ msgstr ""
+
+#~ msgid "F"
+#~ msgstr ""
+
+#~ msgid "I"
+#~ msgstr ""
+
+#~ msgid "Price"
+#~ msgstr ""
+
+#~ msgid "Start"
+#~ msgstr ""
+
+#~ msgid "Name"
+#~ msgstr ""
+
+#~ msgid "Course Form"
+#~ msgstr ""
+
+#~ msgid "Create New Course"
+#~ msgstr ""
+
+#~ msgid "Id"
+#~ msgstr ""
+
+#~ msgid "Creation"
+#~ msgstr ""
+
+#~ msgid "Are you sure to delete? Press cancel to avoid deletion."
+#~ msgstr ""
+
+#~ msgid "Must be one of: %(choices)s"
+#~ msgstr ""
+
+#~ msgid "Required field"
+#~ msgstr ""
+
+#~ msgid "Has %(len)s characters and it must have less than %(max_len)s"
+#~ msgstr ""
+
+#~ msgid "Invalid email"
+#~ msgstr ""
+
+#~ msgid "Must be greater than %(lower)s"
+#~ msgstr ""
+
+#~ msgid "Must be less than %(upper)s"
+#~ msgstr ""
+
+#~ msgid "Must be integer"
+#~ msgstr ""
+
+#~ msgid "Must be a number"
+#~ msgstr ""
+
+#~ msgid "Invalid date. Must be on format %(format)s"
+#~ msgstr ""
+
+#~ msgid "MM/dd/YYYY"
+#~ msgstr ""
+
+#~ msgid "Invalid datetime. Must be on format %(format)s"
+#~ msgstr ""
+
+#~ msgid "MM/dd/YYYY HH:mm:ss"
+#~ msgstr ""
+
+#~ msgid "Logout"
+#~ msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "Courses"
+#~ msgstr ""
+

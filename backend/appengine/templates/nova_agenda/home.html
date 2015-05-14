@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% block body %}
+    {% set agenda = agenda or None %}
+    {% set erros = erros or None %}
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            </br>
+            <div class="well">
+                <h1 class="text-center">Agenda</h1>
+                    <form action="{{ salvar_path_agenda }}" method="post">
+                            {{ csrf_input() }}
+                            {{ form_input( 'Nome','nome',agenda.nome,erros.nome) }}
+                            {{ form_input(_('Data'),'data',agenda.data,erros.data) }}
+                            {{ form_input( 'Hora','hora',agenda.hora,erros.hora) }}
+                            {{ form_input( 'Telefone','telefone',agenda.telefone,erros.telefone) }}
+                            {{ form_input( 'Igreja','igreja',agenda.igreja,erros.igreja) }}
+                            {{ form_input( 'Assunto','assunto',agenda.assunto,erros.assunto) }}
+                            <button type="submit" class="btn btn-success">Salvar</button>
+                    </form>
+                <a href="/consultar_agenda">
+                                <button class="btn btn-info">Consultar</button></a>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

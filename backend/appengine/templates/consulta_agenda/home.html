@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %}
+{% block body %}
+    {% set agenda = agenda or None %}
+    {% set erros = erros or None %}
+    {% block css %}
+            <link rel="stylesheet" href="/static/css/table.css"/>
+        {% endblock %}
+    <div class="container">
+    <div class="row">
+         <div class="small-12 medium-12 large-12 columns">
+            </br>
+            <div class="well">
+                <h1 class="text-center">Listagem de Eventos</h1>
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Telefone</th>
+                        <th>Igreja</th>
+                        <th>Assunto</th>
+                    </tr>
+                    </tr>
+                    </thead>
+                    {% for agenda in agenda_lista %}
+                        <tr>
+                        <td>{{ agenda.nome }}</td>
+                        <td>{{ agenda.data }}</td>
+                        <td>{{ agenda.hora }}</td>
+                        <td>{{ agenda.telefone }}</td>
+                        <td>{{ agenda.igreja }}</td>
+                        <td>{{ agenda.assunto }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
