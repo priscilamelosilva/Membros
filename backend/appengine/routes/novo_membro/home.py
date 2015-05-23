@@ -45,7 +45,7 @@ def salvar(_resp,**propriedades):
         contexto={'salvar_path':router.to_path(salvar),
                   'erros':erros,
                   'membro':membro_form}
-        return TemplateResponse(contexto,'novo_membro/home.html')
+        return TemplateResponse(contexto,'membros/membro_home.html')
     else:
         membro = membro_form.fill_model()
         membro.put()

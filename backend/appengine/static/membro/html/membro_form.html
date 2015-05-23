@@ -1,0 +1,48 @@
+<div class="well">
+    <h1 class="text-center">Formulário de Membro</h1>
+
+    <div id="nome-div" class="form-group" ng-class="{true:'', false:'has-error'}[erros.nome == null]">
+        <label for="nomeInput" class="control-label">{{ nomeLabel }}</label>
+        <input id="nome-input" class="form-control" ng-model="membro.nome">
+        <span class="help-block" ng-show="erros.nome">{{ erros.nome }}</span>
+    </div>
+
+    <div id="cpf-div" class="form-group" ng-class="{true:'', false:'has-error'}[erros.cpf == null]">
+        <label for="cpfInput" class="control-label">{{ cpfLabel }}</label>
+        <input id="cpf-input" class="form-control" ng-model="membro.cpf">
+        <span class="help-block" ng-show="erros.cpf">{{ erros.cpf }}</span>
+    </div>
+
+    <div id="rg-div" class="form-group" ng-class="{true:'', false:'has-error'}[erros.rg == null]">
+        <label for="rgInput" class="control-label">{{ rgLabel }}</label>
+        <input id="rg-input" class="form-control" ng-model="membro.rg">
+        <span class="help-block" ng-show="erros.rg">{{ erros.rg }}</span>
+    </div>
+
+    <div id="data-div" class="form-group" ng-class="{true:'', false:'has-error'}[erros.data == null]">
+        <label for="dataInput" class="control-label">{{ dataLabel }}</label>
+        <input id="data-input" class="form-control" ng-model="membro.data">
+        <span class="help-block" ng-show="erros.data">{{ erros.data }}</span>
+    </div>
+
+    <div id="endereco-div" class="form-group" ng-class="{true:'', false:'has-error'}[erros.endereco == null]">
+        <label for="enderecoInput" class="control-label">{{ enderecoLabel }}</label>
+        <input id="endereco-input" class="form-control" ng-model="membro.endereco">
+        <span class="help-block" ng-show="erros.endereco">{{ erros.endereco }}</span>
+    </div>
+
+    <div id="telefone-div" class="form-group" ng-class="{true:'', false:'has-error'}[erros.telefone == null]">
+        <label for="telefoneInput" class="control-label">{{ telefoneLabel }}</label>
+        <input id="telefone-input" class="form-control" ng-model="membro.telefone">
+        <span class="help-block" ng-show="erros.telefone">{{ erros.telefone }}</span>
+    </div>
+
+    <div id="cargo-div" class="form-group" ng-class="{true:'', false:'has-error'}[erros.cargo == null]">
+        <label for="cargoInput" class="control-label">{{ cargoLabel }}</label>
+        <input id="cargo-input" class="form-control" ng-model="membro.cargo">
+        <span class="help-block" ng-show="erros.cargo">{{ erros.cargo }}</span>
+    </div>
+
+    <button id="salvar-btn" class="btn btn-success" type="button" ng-click="salvar()" ng-hide="salvandoFlag">Salvar</button>
+    <img id="ajax-save-gif" src="/static/img/ajax.gif" ng-show="salvandoFlag">
+</div>

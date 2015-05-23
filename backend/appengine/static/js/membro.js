@@ -1,3 +1,47 @@
+var membroModulo = angular.module('membroModulo', ['rest']);
+
+membroModulo.directive('membroform', function(){
+    return{
+        restrict: 'E',
+        replace: true,
+        templateUrl: '/static/membro/html/membro_form.html ',
+        scope:{
+            membro:'=',
+            nomeLabel: '@',
+            cpfLabel: '@',
+            rgLabel: '@',
+            dataLabel: '@',
+            enderecoLabel: '@',
+            telefoneLabel: '@',
+            cargoLabel: '@'
+        },
+        controller: function($scope, MembroApi){
+            $scope.salvandoFlag = false;
+            $scope.salvar = function () {
+                $scope.salvandoFlag = true;
+                $scope.erros = {};
+                var promessa = MembroApi.salvar($scope.membro);
+                promessa.success(function(membro){
+                    console.log(membro);
+                    $scope.membro.nome = '';
+                    $scope.membro.cpf = '';
+                    $scope.membro.rg = '';
+                    $scope.membro.data = '';
+                    $scope.membro.endereco = '';
+                    $scope.membro.telefone = '';
+                    $scope.membro.cargo = '';
+                    $scope.salvandoFlag = false;
+                })
+                promessa.error(function(erros){
+                    $scope.erros = erros;
+                    console.log(erros);
+                    $scope.salvandoFlag = false;
+                });
+            }
+        }
+    };
+});
+
 $(document).ready(function () {
     var $ajaxSaveGif = $('#ajax-save-gif');
     $ajaxSaveGif.hide();

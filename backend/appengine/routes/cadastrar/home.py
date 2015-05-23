@@ -8,4 +8,4 @@ __author__ = 'inspiron'
 @login_required
 @no_csrf
 def index():
-    return TemplateResponse(template_path='/novo_membro/home.html')
+    return TemplateResponse(template_path='membros/membro_home.html')
