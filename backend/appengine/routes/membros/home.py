@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
+import json
 from config.template_middleware import TemplateResponse
 from tekton import router
 from gaecookie.decorator import no_csrf
@@ -13,18 +14,8 @@ from tekton.gae.middleware.redirect import RedirectResponse
 def index():
     cmd = membro_facade.list_membros_cmd()
     membros = cmd()
-    edit_path = router.to_path(edit)
-    delete_path = router.to_path(delete)
     membro_form = membro_facade.membro_form()
-
-    def localize_membro(membro):
-        membro_dct = membro_form.fill_with_model(membro)
-        membro_dct['edit_path'] = router.to_path(edit_path, membro_dct['id'])
-        membro_dct['delete_path'] = router.to_path(delete_path, membro_dct['id'])
-        return membro_dct
-
-    localized_membros = [localize_membro(membro) for membro in membros]
-    context = {'membros': localized_membros,
+    context = {'rest_list_path': router.to_path(rest.index),
                'rest_new_path': router.to_path(rest.new)}
     return TemplateResponse(context, 'membros/membro_home.html')
 

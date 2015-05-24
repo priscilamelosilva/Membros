@@ -13,7 +13,9 @@ membroModulo.directive('membroform', function(){
             dataLabel: '@',
             enderecoLabel: '@',
             telefoneLabel: '@',
-            cargoLabel: '@'
+            cargoLabel: '@',
+            saveComplete: '&'
+
         },
         controller: function($scope, MembroApi){
             $scope.salvandoFlag = false;
@@ -22,7 +24,6 @@ membroModulo.directive('membroform', function(){
                 $scope.erros = {};
                 var promessa = MembroApi.salvar($scope.membro);
                 promessa.success(function(membro){
-                    console.log(membro);
                     $scope.membro.nome = '';
                     $scope.membro.cpf = '';
                     $scope.membro.rg = '';
@@ -31,13 +32,29 @@ membroModulo.directive('membroform', function(){
                     $scope.membro.telefone = '';
                     $scope.membro.cargo = '';
                     $scope.salvandoFlag = false;
-                })
+                    if($scope.saveComplete != undefined){
+                        $scope.saveComplete({'membro': membro});
+                    }
+                });
                 promessa.error(function(erros){
                     $scope.erros = erros;
-                    console.log(erros);
                     $scope.salvandoFlag = false;
                 });
             }
+        }
+    };
+});
+
+
+membroModulo.directive('membrolinha', function(){
+    return{
+        replace: true,
+        templateUrl: '/static/membro/html/membro_linha.html',
+        scope:{
+            membro:'='
+        },
+        controller: function($scope, MembroApi){
+
         }
     };
 });

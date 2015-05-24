@@ -10,18 +10,31 @@
             return{
                 salvar: function(membro){
                     return $http.post('{{ rest_new_path }}', membro);
+                },
+
+                listar: function(){
+                    return $http.post('{{ rest_list_path }}');
                 }
             };
         });
 
 
-        var membroApp = angular.module('membroApp',['membroModulo']);
-        function MembroController($scope){
+        var membroApp = angular.module('membroApp',['membroModulo', 'rest']);
+        function MembroController($scope, MembroApi){
             $scope.membro = {nome: 'Priscila', cpf:'437.002.657-20', rg:'41.183.266-0', data:'21/03/1994', endereco:'Rua Chile', telefone:'3221-7070', cargo:'Membro'};
             $scope.mostrarFormFlag = false;
-
+            $scope.membroLista = [];
+            $scope.listandoFlag = true;
+            MembroApi.listar().success(function(membros){
+                $scope.membroLista = membros;
+                $scope.listandoFlag = false;
+            });
             $scope.mostrarOuEsconderForm = function(){
                 $scope.mostrarFormFlag = !$scope.mostrarFormFlag;
+            };
+
+            $scope.adicionarMembro = function(membro){
+                $scope.membroLista.unshift(membro)
             }
         }
     </script>
@@ -35,7 +48,8 @@
                 <button class="btn btn-success" ng-click = "mostrarOuEsconderForm()"><span class="glyphicon glyphicon-plus"></span> Adicionar Novo Membro</button>
                 <br />
                 <br />
-                <membroform ng-show="mostrarFormFlag" membro="membro" nome-label="Nome Completo" cpf-label="CPF" rg-label="RG" data-label="Data de Nascimento"  endereco-label="Endereço" telefone-label="Telefone" cargo-label="Cargo"></membroform>
+                <membroform ng-show="mostrarFormFlag" membro="membro" nome-label="Nome Completo" cpf-label="CPF" rg-label="RG" data-label="Data de Nascimento"  endereco-label="Endereço" telefone-label="Telefone" cargo-label="Cargo"
+                        save-complete="adicionarMembro(membro)"></membroform>
                 <hr/>
                 <h2>{% trans %}Lista de Membros{% endtrans %}</h2>
                 <table class="table table-striped table-hover">
@@ -54,30 +68,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {% for membro in membros %}
-                        <tr>
-                            <td><a href="/editar/home/editar_form/{{ membro.id }}" class="btn btn-success btn-sm"><i
-                                    class="glyphicon glyphicon-pencil"></i></a></td>
-                            <td>{{ membro.id }}</td>
-                            <td>{{ membro.creation }}</td>
-                            <td>{{ membro.nome }}</td>
-                            <td>{{ membro.cpf }}</td>
-                            <td>{{ membro.rg }}</td>
-                            <td>{{ membro.data }}</td>
-                            <td>{{ membro.endereco }}</td>
-                            <td>{{ membro.telefone }}</td>
-                            <td>{{ membro.cargo }}</td>
-                            <td>
-                                <form action="/excluir/home/delete_form/{{ membro.id }}" method="post" onsubmit="return confirm('{{_('Are you sure to delete? Press cancel to avoid deletion.')}}');">
-                                    {{ csrf_input() }}
-                                    <button class="btn btn-danger btn-sm"><i
-                                            class="glyphicon glyphicon-trash"></i></button>
-                                </form>
-                            </td>
-                        </tr>
-                    {% endfor %}
+                        <tr membrolinha ng-repeat="m in membroLista" membro="m"></tr>
                     </tbody>
                 </table>
+            <img id="ajax-save-gif" src="/static/img/ajax.gif" ng-show="listandoFlag">
             </div>
         </div>
     </div>
