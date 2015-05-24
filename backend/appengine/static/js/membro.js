@@ -56,12 +56,37 @@ membroModulo.directive('membrolinha', function(){
         },
         controller: function($scope, MembroApi){
             $scope.ajaxFlag = false;
+            $scope.editFlag = false;
+            $scope.membroEdicao = [];
             $scope.apagar = function(){
                 $scope.ajaxFlag = true;
                 MembroApi.apagar($scope.membro.id).success(function(){
                     $scope.deleteComplete({'membro':$scope.membro});
                 }).erros(function(){
                     console.log('erro');
+                });
+            };
+
+            $scope.editar = function(){
+                 $scope.editFlag = true;
+                 $scope.membroEdicao.id = $scope.membro.id;
+                 $scope.membroEdicao.nome = $scope.membro.nome;
+                 $scope.membroEdicao.cpf = $scope.membro.cpf;
+                 $scope.membroEdicao.rg = $scope.membro.rg;
+                 $scope.membroEdicao.data = $scope.membro.data;
+                 $scope.membroEdicao.endereco = $scope.membro.endereco;
+                 $scope.membroEdicao.telefone = $scope.membro.telefone;
+                 $scope.membroEdicao.cargo = $scope.membro.cargo;
+            };
+
+            $scope.cancelarEdicao = function(){
+                $scope.editFlag = false;
+            };
+
+            $scope.completarEdicao = function(){
+                MembroApi.editar($scope.membroEdicao).success(function(membro){
+                    $scope.membro = membro;
+                    $scope.editFlag = false;
                 });
             }
         }

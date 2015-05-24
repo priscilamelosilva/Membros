@@ -1,16 +1,23 @@
 <tr>
-    <td><button class="btn btn-success btn-sm" ng-hide="ajaxFlag"><i
-            class="glyphicon glyphicon-pencil"></i></button></td>
+    <td><button class="btn btn-success btn-sm" ng-click="editar()" ng-hide="ajaxFlag || editFlag"><i
+            class="glyphicon glyphicon-pencil"></i></button>
+
+        <button class="btn btn-success btn-sm" ng-click="completarEdicao()" ng-hide="ajaxFlag || !editFlag"><i
+                class="glyphicon glyphicon-ok"></i></button>
+
+        <button class="btn btn-danger btn-sm" ng-click="cancelarEdicao()" ng-hide="ajaxFlag || !editFlag"><i
+                class="glyphicon glyphicon-remove"></i></button>
+    </td>
     <img src="/static/img/ajax.gif" ng-show="ajaxFlag" />
+    <td><span ng-hide="editFlag">{{ membro.nome }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.nome" /></td>
+    <td><span ng-hide="editFlag">{{ membro.cpf }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.cpf" /></td>
+    <td><span ng-hide="editFlag">{{ membro.rg }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.rg" /></td>
+    <td><span ng-hide="editFlag">{{ membro.data }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.data" /></td>
+    <td><span ng-hide="editFlag">{{ membro.endereco }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.endereco" /></td>
+    <td><span ng-hide="editFlag">{{ membro.telefone }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.telefone" /></td>
+    <td><span ng-hide="editFlag">{{ membro.cargo }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.cargo" /></td>
     <td>{{ membro.id }}</td>
     <td>{{ membro.creation }}</td>
-    <td>{{ membro.nome }}</td>
-    <td>{{ membro.cpf }}</td>
-    <td>{{ membro.rg }}</td>
-    <td>{{ membro.data }}</td>
-    <td>{{ membro.endereco }}</td>
-    <td>{{ membro.telefone }}</td>
-    <td>{{ membro.cargo }}</td>
     <td>
         <button class="btn btn-danger btn-sm" ng-click="apagar()" ng-hide="ajaxFlag"><i
                 class="glyphicon glyphicon-trash"></i></button>

@@ -18,6 +18,9 @@
 
                 apagar: function(id){
                     return $http.post('{{ rest_delete_path }}', {id: id});
+                },
+                editar: function(membro){
+                    return $http.post('{{ rest_edit_path }}', {id: membro.id, nome: membro.nome, cpf: membro.cpf, rg: membro.rg, data: membro.data, endereco: membro.endereco, telefone: membro.telefone, cargo: membro.cargo});
                 }
             };
         });
@@ -70,8 +73,6 @@
                     <thead>
                     <tr>
                         <th/>
-                        <th>{% trans %}Id{% endtrans %}</th>
-                        <th>{% trans %}Criação{% endtrans %}</th>
                         <th>{% trans %}Nome{% endtrans %}</th>
                         <th>{% trans %}Cpf{% endtrans %}</th>
                         <th>{% trans %}Rg{% endtrans %}</th>
@@ -79,6 +80,8 @@
                         <th>{% trans %}Telefone{% endtrans %}</th>
                         <th>{% trans %}Endereco{% endtrans %}</th>
                         <th>{% trans %}Cargo{% endtrans %}</th>
+                        <th>{% trans %}Id{% endtrans %}</th>
+                        <th>{% trans %}Criação{% endtrans %}</th>
                     </tr>
                     </thead>
                     <tbody>
