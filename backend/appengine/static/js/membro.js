@@ -51,10 +51,19 @@ membroModulo.directive('membrolinha', function(){
         replace: true,
         templateUrl: '/static/membro/html/membro_linha.html',
         scope:{
-            membro:'='
+            membro:'=',
+            deleteComplete:'&'
         },
         controller: function($scope, MembroApi){
-
+            $scope.ajaxFlag = false;
+            $scope.apagar = function(){
+                $scope.ajaxFlag = true;
+                MembroApi.apagar($scope.membro.id).success(function(){
+                    $scope.deleteComplete({'membro':$scope.membro});
+                }).erros(function(){
+                    console.log('erro');
+                });
+            }
         }
     };
 });

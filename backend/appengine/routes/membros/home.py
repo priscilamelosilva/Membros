@@ -12,10 +12,8 @@ from tekton.gae.middleware.redirect import RedirectResponse
 @login_required
 @no_csrf
 def index():
-    cmd = membro_facade.list_membros_cmd()
-    membros = cmd()
-    membro_form = membro_facade.membro_form()
     context = {'rest_list_path': router.to_path(rest.index),
+               'rest_delete_path': router.to_path(rest.delete),
                'rest_new_path': router.to_path(rest.new)}
     return TemplateResponse(context, 'membros/membro_home.html')
 

@@ -1,6 +1,7 @@
 <tr>
-    <td><button class="btn btn-success btn-sm"><i
+    <td><button class="btn btn-success btn-sm" ng-hide="ajaxFlag"><i
             class="glyphicon glyphicon-pencil"></i></button></td>
+    <img src="/static/img/ajax.gif" ng-show="ajaxFlag" />
     <td>{{ membro.id }}</td>
     <td>{{ membro.creation }}</td>
     <td>{{ membro.nome }}</td>
@@ -11,7 +12,8 @@
     <td>{{ membro.telefone }}</td>
     <td>{{ membro.cargo }}</td>
     <td>
-        <button class="btn btn-danger btn-sm"><i
+        <button class="btn btn-danger btn-sm" ng-click="apagar()" ng-hide="ajaxFlag"><i
                 class="glyphicon glyphicon-trash"></i></button>
+        <img src="/static/img/ajax.gif" ng-show="ajaxFlag" />
     </td>
 </tr>

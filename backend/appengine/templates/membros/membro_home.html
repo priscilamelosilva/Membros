@@ -14,6 +14,10 @@
 
                 listar: function(){
                     return $http.post('{{ rest_list_path }}');
+                },
+
+                apagar: function(id){
+                    return $http.post('{{ rest_delete_path }}', {id: id});
                 }
             };
         });
@@ -34,7 +38,17 @@
             };
 
             $scope.adicionarMembro = function(membro){
-                $scope.membroLista.unshift(membro)
+                $scope.membroLista.unshift(membro);
+            };
+
+            $scope.removerMembro = function(membro){
+                var membroLista = $scope.membroLista;
+                for(var i = 0; i < membroLista.length; i += 1){
+                    if(membro.id == membroLista[i].id){
+                        membroLista.splice(i, 1);
+                        break;
+                    }
+                }
             }
         }
     </script>
@@ -68,7 +82,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                        <tr membrolinha ng-repeat="m in membroLista" membro="m"></tr>
+                        <tr membrolinha ng-repeat="m in membroLista" membro="m" delete-complete="removerMembro(membro)"></tr>
                     </tbody>
                 </table>
             <img id="ajax-save-gif" src="/static/img/ajax.gif" ng-show="listandoFlag">
