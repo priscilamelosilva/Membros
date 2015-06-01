@@ -139,7 +139,7 @@ $(document).ready(function () {
         $('.has-error').removeClass('has-error');
         $('.help-block').empty();
         $ajaxSaveGif.fadeIn();
-        $salvarBotao.attr('disabled','disabled')
+        $salvarBotao.attr('disabled','disabled');
         $.post('/novo_membro/rest/salvar',
             obterInputsDeMembro(),
             function (membro) {

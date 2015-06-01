@@ -1,5 +1,5 @@
-application: testeappgae
-version: 1
+application: projmembros
+version: 2
 runtime: python27
 api_version: 1
 threadsafe: yes
