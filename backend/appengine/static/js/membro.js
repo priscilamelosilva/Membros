@@ -1,6 +1,6 @@
 var membroModulo = angular.module('membroModulo', ['rest']);
 
-membroModulo.directive('membroform', function(){
+membroModulo.directive('membroform', [function(){
     return{
         restrict: 'E',
         replace: true,
@@ -43,10 +43,10 @@ membroModulo.directive('membroform', function(){
             }
         }
     };
-});
+}]);
 
 
-membroModulo.directive('membrolinha', function(){
+membroModulo.directive('membrolinha', [function(){
     return{
         replace: true,
         templateUrl: '/static/membro/html/membro_linha.html',
@@ -57,14 +57,12 @@ membroModulo.directive('membrolinha', function(){
         controller: function($scope, MembroApi){
             $scope.ajaxFlag = false;
             $scope.editFlag = false;
-            $scope.membroEdicao = [];
+            $scope.membroEdicao = {};
             $scope.apagar = function(){
                 $scope.ajaxFlag = true;
                 MembroApi.apagar($scope.membro.id).success(function(){
                     $scope.deleteComplete({'membro':$scope.membro});
-                }).erros(function(){
-                    console.log('erro');
-                });
+                })
             };
 
             $scope.editar = function(){
@@ -91,7 +89,7 @@ membroModulo.directive('membrolinha', function(){
             }
         }
     };
-});
+}]);
 
 $(document).ready(function () {
     var $ajaxSaveGif = $('#ajax-save-gif');
@@ -121,7 +119,7 @@ $(document).ready(function () {
         $.each(membros, function(index, m){
             adicionarMembro(m);
         });
-    })
+    });
 
 
     function obterInputsDeMembro() {

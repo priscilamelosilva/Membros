@@ -1,0 +1,160 @@
+{% extends 'pessoas/pessoa_base.html' %}
+
+{% block js %}
+    <script type="text/javascript" src="/static/angular/js/angular.min.js"></script>
+    <script>
+        var formacao_app = angular.module("pessoa_app", []);
+        formacao_app.config(function($interpolateProvider){
+            $interpolateProvider.startSymbol('{[').endSymbol(']}');
+        });
+        formacao_app.controller('CtrlPessoa', function ($scope, $http){
+            $scope.pessoas = {{ pessoas|safe or [] }};
+            $scope.index_current = null;
+            $scope.pessoa = {
+                nome: null,
+                cpf: null,
+                rg: null,
+                data: null,
+                endereco: null,
+                telefone: null,
+                cargo: null
+            };
+            $scope.error = {
+                nome: null,
+                cpf: null,
+                rg: null,
+                data: null,
+                endereco: null,
+                telefone: null,
+                cargo: null
+            };
+            $scope.edit = function(index){
+                $scope.index_current = index;
+                $scope.pessoa = $scope.pessoas[index];
+            };
+            $scope.delete = function(index){
+                var _pessoa = $scope.pessoas[index];
+                $http.post('/pessoas/rest/delete', {id: _pessoa.id}).success(function(data){
+                    $scope.pessoas.splice(index, 1);
+                }).error(function(data){
+                    $scope.error = data;
+                });
+            };
+            $scope.salvar = function(){
+                if($scope.pessoa.id ==null){
+                    $http.post('/pessoas/rest/new', $scope.pessoa).success(function(data){
+                        $scope.pessoas.push(data);
+                        $scope.error = {};
+                        $scope.pessoa = {};
+                    }).error(function(data){
+                        $scope.error = data;
+                    });
+                } else {
+                    $http.post('/pessoas/rest/edit', $scope.pessoa).success(function(data){
+                        $scope.pessoas[$scope.index_current] = data;
+                        $scope.error = {};
+                        $scope.pessoa = {};
+                        $scope.index_current = null;
+                    }).error(function(data){
+                        $scope.error = data;
+                    });
+                }
+            };
+        });
+        formacao_app.directive('itemPessoa', function(){
+            return {
+                restrict: 'A',
+                templateUrl: '/static/angular/directives/item.html'
+            };
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div class="container" ng-app="pessoa_app" ng-controller="CtrlPessoa">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <br/>
+
+                <div class="well">
+                    <h1 class="text-center">{% trans %}Pessoa Form{% endtrans %}</h1>
+
+                    <form role="form">
+                        <input type="hidden" value="{{ _csrf_code }}" ng-model="pessoa.csrf" name="_csrf_code"/>
+                        <input type="hidden" name="key_id" ng-model="pessoa.key_id"/>
+                        <div class="well">
+                            <div id="nome-div" class="form-group" ng-class="{true:'', false:'has-error'}[error.nome == null]">
+                                <label for="nomeInput" class="control-label">Nome</label>
+                                <input id="nome-input" class="form-control" ng-model="pessoa.nome">
+                                <span class="help-block" ng-show="error.nome">{[ error.nome ]}</span>
+                            </div>
+
+                            <div id="cpf-div" class="form-group" ng-class="{true:'', false:'has-error'}[error.cpf == null]">
+                                <label for="cpfInput" class="control-label">CPF</label>
+                                <input id="cpf-input" class="form-control" ng-model="pessoa.cpf">
+                                <span class="help-block" ng-show="error.cpf">{[ error.cpf ]}</span>
+                            </div>
+
+                            <div id="rg-div" class="form-group" ng-class="{true:'', false:'has-error'}[error.rg == null]">
+                                <label for="rgInput" class="control-label">RG</label>
+                                <input id="rg-input" class="form-control" ng-model="pessoa.rg">
+                                <span class="help-block" ng-show="error.rg">{[ error.rg ]}</span>
+                            </div>
+
+                            <div id="data-div" class="form-group" ng-class="{true:'', false:'has-error'}[error.data == null]">
+                                <label for="dataInput" class="control-label">Data de Nascimento</label>
+                                <input id="data-input" class="form-control" ng-model="pessoa.data">
+                                <span class="help-block" ng-show="error.data">{[ error.data ]}</span>
+                            </div>
+
+                            <div id="endereco-div" class="form-group" ng-class="{true:'', false:'has-error'}[error.endereco == null]">
+                                <label for="enderecoInput" class="control-label">Endereço</label>
+                                <input id="endereco-input" class="form-control" ng-model="pessoa.endereco">
+                                <span class="help-block" ng-show="error.endereco">{[ error.endereco ]}</span>
+                            </div>
+
+                            <div id="telefone-div" class="form-group" ng-class="{true:'', false:'has-error'}[error.telefone == null]">
+                                <label for="telefoneInput" class="control-label">Telefone</label>
+                                <input id="telefone-input" class="form-control" ng-model="pessoa.telefone">
+                                <span class="help-block" ng-show="error.telefone">{[ error.telefone ]}</span>
+                            </div>
+
+                            <div id="cargo-div" class="form-group" ng-class="{true:'', false:'has-error'}[error.cargo == null]">
+                                <label for="cargoInput" class="control-label">Cargo</label>
+                                <input id="cargo-input" class="form-control" ng-model="pessoa.cargo">
+                                <span class="help-block" ng-show="error.cargo">{[ error.cargo ]}</span>
+                            </div>
+
+                            <button id="salvar-btn" class="btn btn-success" type="button" ng-click="salvar()">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Lista de Pessoas</h2>
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>{% trans %}Id{% endtrans %}</th>
+                        <th>{% trans %}Creation{% endtrans %}</th>
+                        <th>{% trans %}Cargo{% endtrans %}</th>
+                        <th>{% trans %}Nome{% endtrans %}</th>
+                        <th>{% trans %}Cpf{% endtrans %}</th>
+                        <th>{% trans %}Rg{% endtrans %}</th>
+                        <th>{% trans %}Telefone{% endtrans %}</th>
+                        <th>{% trans %}Endereco{% endtrans %}</th>
+                        <th>{% trans %}Data{% endtrans %}</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr item-pessoa ng-repeat="pessoa in pessoas"></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,34 +1,34 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 from gaebusiness.business import CommandExecutionException
-from gaepermission.decorator import login_not_required
 from tekton.gae.middleware.json_middleware import JsonResponse
-from membro_app import membro_facade
+from pessoa_app import pessoa_facade
+from gaepermission.decorator import login_not_required
 
 @login_not_required
 def index():
-    cmd = membro_facade.list_membros_cmd()
-    membro_list = cmd()
-    membro_form = membro_facade.membro_form()
-    membro_dcts = [membro_form.fill_with_model(m) for m in membro_list]
-    return JsonResponse(membro_dcts)
+    cmd = pessoa_facade.list_pessoas_cmd()
+    pessoa_list = cmd()
+    pessoa_form = pessoa_facade.pessoa_form()
+    pessoa_dcts = [pessoa_form.fill_with_model(m) for m in pessoa_list]
+    return JsonResponse(pessoa_dcts)
 
 
 @login_not_required
-def new(_resp, **membro_properties):
-    cmd = membro_facade.save_membro_cmd(**membro_properties)
+def new(_resp, **pessoa_properties):
+    cmd = pessoa_facade.save_pessoa_cmd(**pessoa_properties)
     return _save_or_update_json_response(cmd, _resp)
 
 
 @login_not_required
-def edit(_resp, id, **membro_properties):
-    cmd = membro_facade.update_membro_cmd(id, **membro_properties)
+def edit(_resp, id, **pessoa_properties):
+    cmd = pessoa_facade.update_pessoa_cmd(id, **pessoa_properties)
     return _save_or_update_json_response(cmd, _resp)
 
 
 @login_not_required
 def delete(_resp, id):
-    cmd = membro_facade.delete_membro_cmd(id)
+    cmd = pessoa_facade.delete_pessoa_cmd(id)
     try:
         cmd()
     except CommandExecutionException:
@@ -39,9 +39,10 @@ def delete(_resp, id):
 @login_not_required
 def _save_or_update_json_response(cmd, _resp):
     try:
-        membro = cmd()
+        pessoa = cmd()
     except CommandExecutionException:
         _resp.status_code = 500
         return JsonResponse(cmd.errors)
-    membro_form = membro_facade.membro_form()
-    return JsonResponse(membro_form.fill_with_model(membro))
+    pessoa_form = pessoa_facade.pessoa_form()
+    return JsonResponse(pessoa_form.fill_with_model(pessoa))
+

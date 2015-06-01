@@ -1,14 +1,9 @@
 <tr>
-    <td><button class="btn btn-success btn-sm" ng-click="editar()" ng-hide="ajaxFlag || editFlag"><i
-            class="glyphicon glyphicon-pencil"></i></button>
-
-        <button class="btn btn-success btn-sm" ng-click="completarEdicao()" ng-hide="ajaxFlag || !editFlag"><i
-                class="glyphicon glyphicon-ok"></i></button>
-
-        <button class="btn btn-danger btn-sm" ng-click="cancelarEdicao()" ng-hide="ajaxFlag || !editFlag"><i
-                class="glyphicon glyphicon-remove"></i></button>
+    <td><button ng-click="editar()" class="btn btn-success btn-sm" type="button" ng-hide="ajaxFlag || editFlag"><i class="glyphicon glyphicon-pencil"></i></button>
+        <button ng-click="completarEdicao()"class="btn btn-success btn-sm" type="button" ng-hide="ajaxFlag || !editFlag"><i class="glyphicon glyphicon-ok"></i></button>
+        <button class="btn btn-danger btn-sm" type="button" ng-click="cancelarEdicao()" ng-hide="ajaxFlag || !editFlag"><i class="glyphicon glyphicon-remove"></i></button>
+        <img src="/static/img/ajax.gif" ng-show="ajaxFlag" />
     </td>
-    <img src="/static/img/ajax.gif" ng-show="ajaxFlag" />
     <td><span ng-hide="editFlag">{{ membro.nome }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.nome" /></td>
     <td><span ng-hide="editFlag">{{ membro.cpf }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.cpf" /></td>
     <td><span ng-hide="editFlag">{{ membro.rg }}</span><input ng-show="editFlag" type="text" ng-model="membroEdicao.rg" /></td>
@@ -19,7 +14,7 @@
     <td>{{ membro.id }}</td>
     <td>{{ membro.creation }}</td>
     <td>
-        <button class="btn btn-danger btn-sm" ng-click="apagar()" ng-hide="ajaxFlag"><i
+        <button ng-click="apagar()" class="btn btn-danger btn-sm"  ng-hide="ajaxFlag"><i
                 class="glyphicon glyphicon-trash"></i></button>
         <img src="/static/img/ajax.gif" ng-show="ajaxFlag" />
     </td>

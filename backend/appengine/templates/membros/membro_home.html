@@ -17,10 +17,11 @@
                 },
 
                 apagar: function(id){
-                    return $http.post('{{ rest_delete_path }}', {id: id});
+                    return $http.post('{{ rest_delete_path   }}', {id: id});
                 },
                 editar: function(membro){
-                    return $http.post('{{ rest_edit_path }}', {id: membro.id, nome: membro.nome, cpf: membro.cpf, rg: membro.rg, data: membro.data, endereco: membro.endereco, telefone: membro.telefone, cargo: membro.cargo});
+{#                    return $http.post('{{ rest_edit_path }}', {id: membro.id, nome: membro.nome, cpf: membro.cpf, rg: membro.rg, data: membro.data, endereco: membro.endereco, telefone: membro.telefone, cargo: membro.cargo});#}
+                    return $http.post('{{ rest_edit_path }}', membro);
                 }
             };
         });
