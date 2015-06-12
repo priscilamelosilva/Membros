@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="well">
+                    <h1 class="text-center">{% trans %}Formulário de Upload{% endtrans %}</h1>
+                    <form action="{{ salvar_path }}" method="post" enctype="multipart/form-data">
+                        {{ csrf_input() }}
+                        <input type="file" name="files" multiple="multiple"/>
+                        <button class="btn btn-success" type="submit">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
