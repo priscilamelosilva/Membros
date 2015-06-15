@@ -12,7 +12,9 @@
                     </thead>
                     {% for arq in arquivos %}
                         <tr>
-                            <td class="text-center"><a class="btn btn-primary" href="{{ arq.download_path }}"><i class="glyphicon glyphicon-download-alt"></i></a> {{ arq.filename }}</td></tr>
+                            <td class="text-center"><a class="btn btn-primary" href="{{ arq.download_path }}"><i class="glyphicon glyphicon-download-alt"></i></a> {{ arq.filename }} <a class="btn btn-danger" href="{{ arq.delete_path }}"><i class="glyphicon glyphicon-trash"></i></a>
+                            </td>
+                        </tr>
                     {% endfor %}
                 </table>
             </div>

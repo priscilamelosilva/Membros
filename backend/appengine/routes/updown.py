@@ -6,6 +6,7 @@ from blob_app import blob_facade
 from config.template_middleware import TemplateResponse
 from gaecookie.decorator import no_csrf
 from gaepermission.decorator import login_not_required
+from tekton import router
 from tekton.gae.middleware.redirect import RedirectResponse
 from tekton.router import to_path
 
@@ -21,9 +22,11 @@ def download(_handler,id,filename):
 def index():
     comando=blob_facade.list_blob_files_cmd()
     arquivos=comando()
-    download_path=to_path(download)
+    download_path = to_path(download)
+    delete_path = router.to_path(delete)
     for arq in arquivos:
-        arq.download_path=to_path(download_path,arq.key.id(),arq.filename)
+        arq.delete_path = router.to_path(delete_path, arq.key.id(), arq.filename)
+        arq.download_path = to_path(download_path,arq.key.id(),arq.filename)
     ctx={'arquivos':arquivos}
     return TemplateResponse(ctx, 'updown_home.html')
 
@@ -41,3 +44,11 @@ def form():
     url = blobstore.create_upload_url(upload_path, gs_bucket_name=bucket)
     ctx = {'salvar_path': url}
     return TemplateResponse(ctx, 'upload_form.html')
+
+
+@login_not_required
+@no_csrf
+def delete(_handler, id, file_name):
+    cmd = blob_facade.delete_blob_file_cmd(id)
+    cmd.execute()
+    return RedirectResponse(index)

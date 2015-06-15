@@ -35,7 +35,6 @@ class SaveTests(GAETestCase):
         self.assertEqual('data', pes.data)
 
 
-
     def test_validacao(self):
         resposta = new.save()
         self.assertIsInstance(resposta, TemplateResponse)
@@ -49,9 +48,6 @@ class SaveTests(GAETestCase):
                             'nome': u'Required field',
                             'rg': u'Required field',
                             'telefone': u'Required field'}}, resposta.context)
-
-
-
 
 
     def test_json_error(self):
