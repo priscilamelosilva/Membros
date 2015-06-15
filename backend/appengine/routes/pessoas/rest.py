@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 from gaebusiness.business import CommandExecutionException
-from tekton.gae.middleware.json_middleware import JsonResponse
+from pessoa_app.pessoa_commands import PessoaForm
+from tekton.gae.middleware.json_middleware import JsonResponse, JsonUnsecureResponse
 from pessoa_app import pessoa_facade
 from gaepermission.decorator import login_not_required
 
@@ -18,6 +19,20 @@ def index():
 def new(_resp, **pessoa_properties):
     cmd = pessoa_facade.save_pessoa_cmd(**pessoa_properties)
     return _save_or_update_json_response(cmd, _resp)
+
+
+@login_not_required
+def salvar(_resp, **propriedades):
+    form = PessoaForm(**propriedades)
+    erros = form.validate()
+    if erros:
+        _resp.set_status(400)
+        return JsonUnsecureResponse(erros)
+    pessoa = form.fill_model()
+    pessoa.put()
+    dct = form.fill_with_model(pessoa)
+    log.info(dct)
+    return JsonUnsecureResponse(dct)
 
 
 @login_not_required

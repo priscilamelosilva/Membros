@@ -3,7 +3,10 @@ from __future__ import absolute_import, unicode_literals
 from base import GAETestCase
 from datetime import datetime, date
 from decimal import Decimal
+from config.template_middleware import TemplateResponse
+from mock import Mock
 from pessoa_app.pessoa_model import Pessoa
+from routes.pessoas import new, rest
 from routes.pessoas.new import index, save
 from tekton.gae.middleware.redirect import RedirectResponse
 
@@ -16,21 +19,43 @@ class IndexTests(GAETestCase):
 
 class SaveTests(GAETestCase):
     def test_success(self):
-        self.assertIsNone(Pessoa.query().get())
-        redirect_response = save(cargo='cargo_string', nome='nome_string', cpf='cpf_string', rg='rg_string', telefone='telefone_string', endereco='endereco_string', data='data_string')
-        self.assertIsInstance(redirect_response, RedirectResponse)
-        saved_pessoa = Pessoa.query().get()
+        resposta = new.save(cargo='cargo', nome='nome', cpf='cpf', rg='rg', telefone='telefone', endereco='endereco', data='data')
+        self.assertIsInstance(resposta, RedirectResponse)
+        self.assertEqual('/pessoas', resposta.context)
+        saved_pessoa = Pessoa.query().fetch()
+        self.assertEqual(1, len(saved_pessoa))
+        pes = saved_pessoa[0]
         self.assertIsNotNone(saved_pessoa)
-        self.assertEquals('cargo_string', saved_pessoa.cargo)
-        self.assertEquals('nome_string', saved_pessoa.nome)
-        self.assertEquals('cpf_string', saved_pessoa.cpf)
-        self.assertEquals('rg_string', saved_pessoa.rg)
-        self.assertEquals('telefone_string', saved_pessoa.telefone)
-        self.assertEquals('endereco_string', saved_pessoa.endereco)
-        self.assertEquals('data_string', saved_pessoa.data)
+        self.assertEqual('cargo', pes.cargo)
+        self.assertEqual('nome', pes.nome)
+        self.assertEqual('cpf', pes.cpf)
+        self.assertEqual('rg', pes.rg)
+        self.assertEqual('telefone', pes.telefone)
+        self.assertEqual('endereco', pes.endereco)
+        self.assertEqual('data', pes.data)
 
-    def test_error(self):
-        template_response = save()
-        errors = template_response.context['errors']
-        self.assertSetEqual(set(['cargo', 'nome', 'cpf', 'rg', 'telefone', 'endereco', 'data']), set(errors.keys()))
-        self.assert_can_render(template_response)
+
+
+    def test_validacao(self):
+        resposta = new.save()
+        self.assertIsInstance(resposta, TemplateResponse)
+        self.assert_can_render(resposta)
+        self.assertIsNone(Pessoa.query().get())
+        self.maxDiff = None
+        self.assertDictEqual({u'pessoa': {}, u'errors': {'cargo': u'Required field',
+                            'cpf': u'Required field',
+                            'data': u'Required field',
+                            'endereco': u'Required field',
+                            'nome': u'Required field',
+                            'rg': u'Required field',
+                            'telefone': u'Required field'}}, resposta.context)
+
+
+
+
+
+    def test_json_error(self):
+        resposta_mock = Mock()
+        resposta = rest.salvar(resposta_mock)
+        resposta_mock.set_status.assert_called_once_with(400)
+        self.assert_can_serialize_as_json(resposta)

@@ -18,7 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/appengine/apps" />
       <excludeFolder url="file://$MODULE_DIR$/backend/appengine/lib" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 2.7.5+ virtualenv at ~/PycharmProjects/Membros/backend/venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Google App Engine SDK" level="project" />
   </component>
